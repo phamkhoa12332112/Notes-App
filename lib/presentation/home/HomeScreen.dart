@@ -3,12 +3,15 @@ import 'package:tesst/resources/assets_manager.dart';
 import 'package:tesst/resources/sizes_manager.dart';
 import 'package:tesst/resources/strings_manager.dart';
 
+import '../sidebar/SideBar.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Sidebar(),
       appBar: AppBar(
         title: TextField(
           autofocus: true,
@@ -18,10 +21,6 @@ class HomeScreen extends StatelessWidget {
               fillColor: Colors.white,
               contentPadding: const EdgeInsets.all(SizesManager.p12),
               border: const OutlineInputBorder(),
-              prefixIcon: IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {},
-              ),
               suffixIcon: SizedBox(
                 width: SizesManager.w100,
                 child: Row(
