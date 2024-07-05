@@ -3,6 +3,7 @@ import 'package:tesst/resources/assets_manager.dart';
 import 'package:tesst/resources/sizes_manager.dart';
 import 'package:tesst/resources/strings_manager.dart';
 
+import '../add_note_screen/AddNoteScreen.dart';
 import '../sidebar/SideBar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -77,8 +78,10 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue,
-        child: const Icon(Icons.add),
-        onPressed: () { },
+        child: Icon(Icons.add),
+        onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => AddNoteScreen()));
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );

@@ -11,4 +11,12 @@ class StringsManger {
   static const String delete = "Thùng rác";
   static const String setting = "Cài đặt";
   static const String help = "Trợ giúp và phản hồi";
+
+  static const String title = 'Tiêu đề';
+  static const String back = 'Quay lại';
+  static const String content_dialog = 'Bạn có muốn hủy bỏ quá trình thêm?';
+  static const String no = 'Không';
+  static const String yes = 'Có';
+
+
 }
