@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tesst/presentation/sidebar/ListTitle.dart';
 import 'package:tesst/resources/sizes_manager.dart';
 import 'package:tesst/resources/strings_manager.dart';
 import 'package:tesst/routes/routes.dart';
+import 'list_title.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({super.key});
@@ -16,37 +16,37 @@ class Sidebar extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: SizesManager.s20),
               StringsManger.app_name),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.noted,
             icon: const Icon(Icons.light),
             routes: RoutesName.homeScreen,
           ),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.remind,
             icon: const Icon(Icons.conveyor_belt),
             routes: RoutesName.notificationScreen,
           ),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.add_lable,
             icon: const Icon(Icons.add),
-            routes: RoutesName.homeScreen,
+            routes: RoutesName.labelScreen,
           ),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.save,
             icon: const Icon(Icons.save),
             routes: RoutesName.homeScreen,
           ),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.delete,
             icon: const Icon(Icons.delete),
             routes: RoutesName.homeScreen,
           ),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.setting,
             icon: const Icon(Icons.settings),
             routes: RoutesName.homeScreen,
           ),
-          Listtitle(
+          ContentSidebar(
             text: StringsManger.help,
             icon: const Icon(Icons.help),
             routes: RoutesName.homeScreen,
