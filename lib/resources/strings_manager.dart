@@ -18,5 +18,5 @@ class StringsManger {
   static const String no = 'Không';
   static const String yes = 'Có';
 
-
+  static const String title_label = 'Chỉnh sửa nhãn';
 }

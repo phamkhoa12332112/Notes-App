@@ -13,6 +13,7 @@ class SizesManager {
   static const double m10 = 10.0;
   static const double m100 = 100.0;
 
+  static const double h1 = 1.0;
   static const double h60 = 60.0;
 
 

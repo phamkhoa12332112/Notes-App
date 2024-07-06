@@ -4,7 +4,7 @@ import 'package:tesst/resources/sizes_manager.dart';
 import 'package:tesst/resources/strings_manager.dart';
 import 'package:tesst/routes/routes.dart';
 
-import '../sidebar/SideBar.dart';
+import '../menu/side_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
