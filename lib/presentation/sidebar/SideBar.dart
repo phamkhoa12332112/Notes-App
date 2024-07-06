@@ -24,7 +24,7 @@ class Sidebar extends StatelessWidget {
           Listtitle(
             text: StringsManger.remind,
             icon: const Icon(Icons.conveyor_belt),
-            routes: RoutesName.homeScreen,
+            routes: RoutesName.notificationScreen,
           ),
           Listtitle(
             text: StringsManger.add_lable,
