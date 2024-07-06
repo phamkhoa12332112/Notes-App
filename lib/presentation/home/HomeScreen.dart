@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tesst/resources/assets_manager.dart';
 import 'package:tesst/resources/sizes_manager.dart';
 import 'package:tesst/resources/strings_manager.dart';
+import 'package:tesst/routes/routes.dart';
 
-import '../add_note_screen/AddNoteScreen.dart';
 import '../sidebar/SideBar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,7 +15,6 @@ class HomeScreen extends StatelessWidget {
       drawer: Sidebar(),
       appBar: AppBar(
         title: TextField(
-          autofocus: true,
           decoration: InputDecoration(
               hintText: StringsManger.searchText_home,
               filled: true,
@@ -42,13 +41,15 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image(image: AssetImage(ImageAssets.light)),
-            Text(StringsManger.hintText_home),
-          ],
+      body: const SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image(image: AssetImage(ImageAssets.light)),
+              Text(StringsManger.hintText_home),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
@@ -78,9 +79,9 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => AddNoteScreen()));
+            Navigator.pushNamed(context, RoutesName.addNoteScreen);
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tesst/presentation/home/HomeScreen.dart';
 import 'package:tesst/resources/gaps_manager.dart';
 import 'package:tesst/resources/sizes_manager.dart';
 import 'package:tesst/resources/strings_manager.dart';
+import 'package:tesst/routes/routes.dart';
 
 class AddNoteScreen extends StatefulWidget {
   const AddNoteScreen({super.key});
@@ -45,11 +45,8 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                                               Navigator.pop(context)),
                                       CupertinoDialogAction(
                                           child: const Text(StringsManger.yes),
-                                          onPressed: () => Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const HomeScreen())))
+                                          onPressed: () => Navigator.pushNamed(
+                                              context, RoutesName.homeScreen))
                                     ],
                                   ),
                               barrierDismissible: false);
@@ -104,7 +101,10 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.popAndPushNamed(context, RoutesName.homeScreen,
+              result: [_titleController.text, _contentController.text]);
+        },
         elevation: SizesManager.e10,
         child: const Icon(Icons.save),
       ),
@@ -134,10 +134,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
               ),
             ),
             IconButton(
-              onPressed: () {
-                Navigator.pop(
-                    context, [_titleController.text, _contentController.text]);
-              },
+              onPressed: () {},
               icon: const Icon(Icons.more_vert),
             )
           ],
