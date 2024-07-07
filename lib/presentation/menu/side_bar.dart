@@ -44,12 +44,12 @@ class Sidebar extends StatelessWidget {
           ContentSidebar(
             text: StringsManger.setting,
             icon: const Icon(Icons.settings),
-            routes: RoutesName.homeScreen,
+            routes: RoutesName.settingScreen,
           ),
           ContentSidebar(
             text: StringsManger.help,
             icon: const Icon(Icons.help),
-            routes: RoutesName.homeScreen,
+            routes: RoutesName.helpScreen,
           )
         ],
       ),
