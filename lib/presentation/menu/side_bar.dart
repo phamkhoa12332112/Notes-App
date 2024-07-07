@@ -34,12 +34,12 @@ class Sidebar extends StatelessWidget {
           ContentSidebar(
             text: StringsManger.save,
             icon: const Icon(Icons.save),
-            routes: RoutesName.homeScreen,
+            routes: RoutesName.saveScreen,
           ),
           ContentSidebar(
             text: StringsManger.delete,
             icon: const Icon(Icons.delete),
-            routes: RoutesName.homeScreen,
+            routes: RoutesName.deleteScreen,
           ),
           ContentSidebar(
             text: StringsManger.setting,

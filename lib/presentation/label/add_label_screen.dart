@@ -17,33 +17,33 @@ class AddLabelScreen extends StatelessWidget {
                 height: SizesManager.h1,
               )),
         ),
-        body: const Column(
-          children: [
-            TextField(
-              autofocus: true,
-              decoration: InputDecoration(
-                  hintText: StringsManger.add_lable,
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: EdgeInsets.all(SizesManager.p12),
-                  suffixIcon: Icon(Icons.done),
-                  prefixIcon: Icon(Icons.close)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(SizesManager.p12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(Icons.label_outlined),
-                  Text(
-                    StringsManger.title,
-                    style: TextStyle(fontSize: SizesManager.s15),
-                  ),
-                  Icon(Icons.edit)
-                ],
+        body: const SafeArea(
+          child: Column(
+            children: [
+              TextField(
+                autofocus: true,
+                decoration: InputDecoration(
+                    hintText: StringsManger.add_lable,
+                    contentPadding: EdgeInsets.all(SizesManager.p12),
+                    suffixIcon: Icon(Icons.done),
+                    prefixIcon: Icon(Icons.close)),
               ),
-            )
-          ],
+              Padding(
+                padding: EdgeInsets.all(SizesManager.p12),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.label_outlined),
+                    Text(
+                      StringsManger.title,
+                      style: TextStyle(fontSize: SizesManager.s15),
+                    ),
+                    Icon(Icons.edit)
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
