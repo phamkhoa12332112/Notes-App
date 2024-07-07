@@ -5,7 +5,10 @@ import 'package:tesst/presentation/home/home_screen.dart';
 import 'package:tesst/presentation/label/add_label_screen.dart';
 import 'package:tesst/presentation/notification_screen/notification_screen.dart';
 import 'package:tesst/presentation/save/save_screen.dart';
+import 'package:tesst/presentation/setting_screen/setting_screen.dart';
 import 'package:tesst/routes/routes.dart';
+
+import '../presentation/help_screen/help_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings routeSettings) {
@@ -23,6 +26,10 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SaveScreen());
       case RoutesName.deleteScreen:
         return MaterialPageRoute(builder: (_) => const DeleteScreen());
+      case RoutesName.settingScreen:
+        return MaterialPageRoute(builder: (_) => const SettingScreen());
+      case RoutesName.helpScreen:
+        return MaterialPageRoute(builder: (_) => const HelpScreen());
       default:
         return null;
     }
